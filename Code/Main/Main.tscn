@@ -1,3 +1,46 @@
-[gd_scene format=3 uid="uid://bb8oe5tay2j3w"]
+[gd_scene load_steps=3 format=3 uid="uid://bb8oe5tay2j3w"]
+
+[ext_resource type="Script" path="res://Main/Main.gd" id="1_67g07"]
+[ext_resource type="Script" path="res://Main/Snowman.gd" id="2_vqa3f"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_67g07")
+
+[node name="Snowman" type="Node2D" parent="."]
+position = Vector2(144, 280)
+scale = Vector2(1.11368, 1.27668)
+script = ExtResource("2_vqa3f")
+
+[node name="Timer" type="Timer" parent="Snowman"]
+autostart = true
+
+[node name="Outline" type="Line2D" parent="Snowman"]
+position = Vector2(106, 12)
+scale = Vector2(0.67173, 0.689171)
+points = PackedVector2Array(237, -29, 172, -125, 245, -192, 307.905, -192.707, 334, -193, 410.88, -121.885, 351.332, -29.0204, 229, -35, 154.824, 43.5305, 147.381, 111.728, 196.508, 179.926, 333.467, 179.926, 410.88, 110.277, 398.97, 40.6285, 339.422, -40.6285)
+default_color = Color(0.905882, 0.235294, 0.505882, 1)
+
+[node name="Pink" type="Polygon2D" parent="Snowman"]
+position = Vector2(2, 0)
+scale = Vector2(0.98769, 1)
+color = Color(0.980392, 0.705882, 0.807843, 1)
+polygon = PackedVector2Array(264, -120, 224, -72, 264, -8, 216, 40, 208, 88, 240, 136, 336, 136, 384, 80, 376, 40, 344, -8, 384, -64, 328, -120, 272, -120)
+
+[node name="Right Eye" type="Line2D" parent="Snowman"]
+position = Vector2(10, -4)
+points = PackedVector2Array(256, -80, 272, -96, 280, -80)
+default_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="Left Eye" type="Line2D" parent="Snowman"]
+position = Vector2(50, -4)
+points = PackedVector2Array(256, -80, 272, -96, 280, -80)
+default_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="Smile" type="Line2D" parent="Snowman"]
+points = PackedVector2Array(274, -60, 298, -36, 314, -60)
+default_color = Color(0.0156863, 0.0156863, 0.0156863, 1)
+
+[node name="Frown" type="Line2D" parent="Snowman"]
+visible = false
+points = PackedVector2Array(274, -44, 290, -60, 306, -44)
+default_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
